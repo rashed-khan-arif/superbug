@@ -29,8 +29,6 @@ import javax.annotation.PostConstruct;
 })
 public class SuperbugApplication   {
 
-    private static final Logger logger = LoggerFactory.getLogger(Application.class);
-
     @Autowired
     private Environment env;
 
