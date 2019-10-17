@@ -21,14 +21,13 @@ import java.util.TimeZone;
 
 import javax.annotation.PostConstruct;
 
-import javafx.application.Application;
 
 @EnableAutoConfiguration
 @SpringBootApplication(exclude = {JacksonAutoConfiguration.class})
 @EnableConfigurationProperties({
         FileStorageProperties.class
 })
-public class SuperbugApplication implements CommandLineRunner {
+public class SuperbugApplication   {
 
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
@@ -49,17 +48,7 @@ public class SuperbugApplication implements CommandLineRunner {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        Map<String, String> env = System.getenv();
-        for (String envName : env.keySet()) {
-            System.out.println("Environment: \t");
-            System.out.format("%s=%s%n",
-                    envName,
-                    env.get(envName));
-        }
-    }
-        
+
         
         
 }
